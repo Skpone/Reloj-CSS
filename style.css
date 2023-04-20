@@ -4,8 +4,9 @@
     display: block; /*display block para q cuando el margin este en auto me lo centre*/
     position: relative; /*lo necesito para que los elementos queden dentro del reloj*/
     margin: 0 auto;
-    border: 5px dashed #faa;
+    border: 5px dashed #fcc;
     border-radius: 50%;
+    background-color: violet;
 }
 
 .hour-hand, .minute-hand, .second-hand{
@@ -16,9 +17,10 @@
 
 .hour-hand {
     top: 60px; /*los tops para cada aguja son diferentes pq si height lo es*/
-    width: 8px;
+    width: 7px;
     height: 40px;
     background-color: #0f0;
+    border-radius: 20%;
 }
   
 .minute-hand {
@@ -26,6 +28,7 @@
     width: 4px;
     height: 60px;
     background-color: #000;
+    border-radius: 40%;
 }
   
 .second-hand {
@@ -33,4 +36,15 @@
     width: 2px;
     height: 70px;
     background-color: #f00;
+    border-radius: 90%;
+}
+
+.clock-point {
+    position: absolute;
+    left: 93px; /*para que quede lo mas en el centro posible*/
+    top: 93px; /*para que quede lo mas en el centro posible*/
+    width: 15px;
+    height: 15px;
+    background-color: #0bb;
+    border-radius: 50%
 }
