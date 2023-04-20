@@ -1,0 +1,49 @@
+.clock {
+    width: 200px;
+    height: 200px;
+    display: block; /*display block para q cuando el margin este en auto me lo centre*/
+    position: relative; /*lo necesito para que los elementos queden dentro del reloj*/
+    margin: 0 auto;
+    border: 5px dashed #faa;
+    border-radius: 50%;
+}
+
+.hour-hand, .minute-hand, .second-hand{
+    position: absolute; /*para que no ocupe espacio y pueda super ponerlo con las demas agujas*/
+    left: 100px; /*los ponemos en el centro (100px es el centro pq es la mitad del ancho q es 200px)*/
+    transform-origin: bottom; /*el transform origin sirve para que hagamos la rotacion desde en este caso el piso de cada aguja*/
+    animation: rotate steps(60) infinite; /*seteamos la animacion para cada aguja*/
+}
+
+.hour-hand {
+    top: 60px; /*los tops para cada aguja son diferentes pq si height lo es*/
+    width: 8px;
+    height: 40px;
+    background-color: #0f0;
+    animation-duration: 43200s; /*establecemos que el tiempo de la animacion de la aguja de hora para q de una vuelta completa tarde 12 horas*/
+}
+  
+.minute-hand {
+    top: 40px; /*los tops para cada aguja son diferentes pq si height lo es*/
+    width: 4px;
+    height: 60px;
+    background-color: #000;
+    animation-duration: 3600s;/*que tarde 1 hora en dar la vuelta completa*/
+}
+  
+.second-hand {
+    top: 30px; /*los tops para cada aguja son diferentes pq si height lo es*/
+    width: 2px;
+    height: 70px;
+    background-color: #f00;
+    animation-duration: 60s;/*1 minuto en dar la vuelta completa*/
+}
+
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
