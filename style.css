@@ -9,6 +9,7 @@
     background-color: violet;
 }
 
+/* AGUJAS */
 .hour-hand, .minute-hand, .second-hand{
     position: absolute; /*para que no ocupe espacio y pueda super ponerlo con las demas agujas*/
     left: 100px; /*los ponemos en el centro (100px es el centro pq es la mitad del ancho q es 200px)*/
@@ -16,7 +17,7 @@
 }
 
 .hour-hand {
-    top: 60px; /*los tops para cada aguja son diferentes pq si height lo es*/
+    top: 60px; /*los tops para cada aguja son diferentes pq su heights tambien*/
     width: 7px;
     height: 40px;
     background-color: #0f0;
@@ -24,7 +25,7 @@
 }
   
 .minute-hand {
-    top: 40px; /*los tops para cada aguja son diferentes pq si height lo es*/
+    top: 40px; /*los tops para cada aguja son diferentes pq su heights tambien*/
     width: 4px;
     height: 60px;
     background-color: #000;
@@ -32,13 +33,15 @@
 }
   
 .second-hand {
-    top: 30px; /*los tops para cada aguja son diferentes pq si height lo es*/
+    top: 30px; /*los tops para cada aguja son diferentes pq su heights tambien*/
     width: 2px;
     height: 70px;
     background-color: #f00;
     border-radius: 90%;
 }
+/* AGUJAS */
 
+/* punto centro del reloj */
 .clock-point {
     position: absolute;
     left: 95.8px; /*para que quede lo mas en el centro posible*/
